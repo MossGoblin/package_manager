@@ -1,5 +1,5 @@
 from infix import mul_infix
-from objects import Unit, Composite
+from .objects import Unit, Composite
 
 # OPERATIRS
 
