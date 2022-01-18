@@ -1,13 +1,14 @@
 from toolbox.tools import *
-from toolbox.vectors import Vector, Composite
+from toolbox.objects import Unit, Composite
 
 def main():
-    a = Vector(1, 1, 0, 0)
-    b = Vector(1, 1, 1, 1)
+    a = Unit(1, 1, 1, 0)
+    b = Unit(1, 1, 0, 1)
     ab = a *add* b
     print(ab)
-    c = Composite(a)
-    c.add_vector(b)
+    # c = Composite(a)
+    # c.add_vector(b)
+    c = a *cmb* b
     print(c)
     pass
 

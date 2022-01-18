@@ -1,4 +1,4 @@
-class Vector():
+class Unit():
     def __init__(self, pos_x, pos_y, neg_x=0, neg_y=0):
         self.pos = (pos_x, pos_y)
         self.neg = (neg_x, neg_y)
@@ -15,7 +15,7 @@ class Vector():
 
 
 class Composite():
-    def __init__(self, v: Vector = None):
+    def __init__(self, v: Unit = None):
         self.vectors = [v]
         self.pos = [v.pos]
         self.neg = [v.neg]
@@ -33,7 +33,7 @@ class Composite():
             self_string = self_string + f'{neg}, '
         return self_string
 
-    def add_vector(self, v: Vector):
+    def add_vector(self, v: Unit):
         if v.abs in self.abs:
             raise Exception('The vector is already in the composite')
         if v.neg in self.neg:
